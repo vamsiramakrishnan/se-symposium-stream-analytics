@@ -1,4 +1,4 @@
-group.id=$CONNECTGROUPIP
+group.id=$CONNECTGROUPID
 
 bootstrap.servers=<streamPoolBootstrapServer>
 sasl.mechanism=PLAIN
