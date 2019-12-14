@@ -1,6 +1,6 @@
 group.id=$CONNECTGROUPID
 
-bootstrap.servers=<streamPoolBootstrapServer>
+bootstrap.servers=$BOOTSTRAPSERVER
 sasl.mechanism=PLAIN
 security.protocol=SASL_SSL
 sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="$TENANCYID/$USERNAME/$STREAMPOOLOCID" password="$AUTHTOKEN";
@@ -15,15 +15,15 @@ consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModul
 
 config.storage.replication.factor=1
 config.storage.partitions=1
-config.storage.topic=$KAFKACONNECTCONFIGOCID
+config.storage.topic=$KAFKACONNECTCONFIGOCID-config
 
 status.storage.replication.factor=1
 status.storage.partitions=1
-status.storage.topic=$KAFKACONNECTSTATUSOCID
+status.storage.topic=$KAFKACONNECTCONFIGOCID-status
 
 offset.storage.replication.factor=1
 offset.storage.partitions=1
-offset.storage.topic=$KAFKACONNECTOFFSETOCID
+offset.storage.topic=<connectConfigOCID>-offset
 offset.flush.interval.ms=10000
 offset.flush.timeout.ms=5000
 
