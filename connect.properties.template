@@ -23,7 +23,7 @@ status.storage.topic=$KAFKACONNECTCONFIGOCID-status
 
 offset.storage.replication.factor=1
 offset.storage.partitions=1
-offset.storage.topic=<connectConfigOCID>-offset
+offset.storage.topic=$KAFKACONNECTCONFIGOCID-offset
 offset.flush.interval.ms=10000
 offset.flush.timeout.ms=5000
 
